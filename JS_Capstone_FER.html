@@ -16088,9 +16088,9 @@ First pass grayscale CNN model is a good baseline to build from. The training ac
 <tbody>
 <tr>
 <td>Grayscale Accuracy</td>
+<td>0.70</td>
 <td>0.69</td>
-<td>0.68</td>
-<td>0.617</td>
+<td>0.70</td>
 </tr>
 </tbody>
 </table>
@@ -20179,6 +20179,7 @@ The ResNet v2 model was imported up to layer 'block6e_expand_activation'. Other 
 <th>Train Accuracy</th>
 <th>Val Loss</th>
 <th>Val Accuracy</th>
+<th>Test Loss</th>
 <th>Test Accuracy</th>
 </tr>
 </thead>
@@ -20186,46 +20187,51 @@ The ResNet v2 model was imported up to layer 'block6e_expand_activation'. Other 
 <tr>
 <td><strong>Model 1</strong>: 1st Grayscale</td>
 <td>605,060</td>
-<td>0.68</td>
-<td>0.72</td>
+<td>0.73</td>
+<td>0.70</td>
 <td>0.78</td>
 <td>0.68</td>
-<td>0.65</td>
+<td>0.82</td>
+<td>0.70</td>
 </tr>
 <tr>
 <td><strong>Model 2</strong>: 2nd Grayscale</td>
 <td>455,780</td>
-<td>0.54</td>
-<td>0.78</td>
-<td>0.74</td>
+<td>0.48</td>
+<td>0.81</td>
+<td>0.77</td>
 <td>0.71</td>
-<td>0.69</td>
+<td>0.70</td>
+<td>0.70</td>
 </tr>
 <tr>
 <td><strong>Model 3</strong>: VGG16</td>
 <td>14,714,688</td>
+<td>0.70</td>
 <td>0.71</td>
-<td>0.72</td>
-<td>0.80</td>
+<td>0.82</td>
 <td>0.67</td>
-<td>0.66</td>
+<td>0.72</td>
+<td>0.73</td>
 </tr>
 <tr>
 <td><strong>Model 4</strong>: ResNet V2</td>
 <td>42,658,176</td>
-<td>1.43</td>
+<td>1.38</td>
 <td>0.26</td>
-<td>1.35</td>
-<td>0.36</td>
-<td>0.28</td>
+<td>1.37</td>
+<td>0.31</td>
+<td>1.41</td>
+<td>0.25</td>
 </tr>
 <tr>
 <td><strong>Model 5</strong>: EfficientNet</td>
 <td>8,769,374</td>
-<td>1.39</td>
+<td>1.38</td>
 <td>0.26</td>
 <td>1.37</td>
 <td>0.24</td>
+<td>1.39</td>
 <td>0.25</td>
 </tr>
 </tbody>
@@ -21666,89 +21672,89 @@ Trial and error, and intuition from CNN methods utilized in prior models let to 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Accuracy and loss scores for each model.</p>
+<p><strong>Accuracy and loss scores for each model.</strong></p>
 <table>
 <thead><tr>
 <th></th>
 <th>Parameters</th>
-<th>Train Accuracy</th>
 <th>Train Loss</th>
-<th>Val Accuracy</th>
+<th>Train Accuracy</th>
 <th>Val Loss</th>
-<th>Test Accuracy</th>
+<th>Val Accuracy</th>
 <th>Test Loss</th>
+<th>Test Accuracy</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Model 1</strong>: Grayscale 1</td>
+<td><strong>Model 1</strong>: 1st Grayscale</td>
 <td>605,060</td>
-<td>0.706</td>
-<td>0.725</td>
+<td>0.73</td>
+<td>0.70</td>
+<td>0.78</td>
 <td>0.68</td>
-<td>0.79</td>
-<td>0.62</td>
-<td>0.81</td>
+<td>0.82</td>
+<td>0.70</td>
 </tr>
 <tr>
-<td><strong>Model 2</strong>: Grayscale 2</td>
-<td>389,604</td>
-<td>0.796</td>
-<td>0.496</td>
-<td>0.715</td>
-<td>0.74</td>
-<td>0.68</td>
-<td>0.68</td>
+<td><strong>Model 2</strong>: 2nd Grayscale</td>
+<td>455,780</td>
+<td>0.48</td>
+<td>0.81</td>
+<td>0.77</td>
+<td>0.71</td>
+<td>0.70</td>
+<td>0.70</td>
 </tr>
 <tr>
 <td><strong>Model 3</strong>: VGG16</td>
 <td>14,714,688</td>
-<td>0.72</td>
-<td>0.687</td>
-<td>0.675</td>
-<td>0.815</td>
-<td>0.72</td>
+<td>0.70</td>
 <td>0.71</td>
+<td>0.82</td>
+<td>0.67</td>
+<td>0.72</td>
+<td>0.73</td>
 </tr>
 <tr>
 <td><strong>Model 4</strong>: ResNet V2</td>
 <td>42,658,176</td>
-<td>0.27</td>
 <td>1.38</td>
-<td>0.36</td>
+<td>0.26</td>
 <td>1.37</td>
+<td>0.31</td>
+<td>1.41</td>
 <td>0.25</td>
-<td>1.40</td>
 </tr>
 <tr>
 <td><strong>Model 5</strong>: EfficientNet</td>
 <td>8,769,374</td>
-<td>0.27</td>
 <td>1.38</td>
-<td>0.37</td>
-<td>1.35</td>
+<td>0.26</td>
+<td>1.37</td>
+<td>0.24</td>
+<td>1.39</td>
 <td>0.25</td>
-<td>1.41</td>
 </tr>
 <tr>
 <td><strong>Model 6</strong>: Grayscale 3</td>
 <td>1,592,324</td>
-<td>0.80</td>
 <td>0.51</td>
-<td>0.77</td>
+<td>0.79</td>
 <td>0.60</td>
-<td>0.805</td>
-<td>0.543</td>
+<td>0.77</td>
+<td>0.55</td>
+<td>0.84</td>
 </tr>
 <tr>
 <td><strong>Model 7</strong>: Grayscale 4</td>
 <td>2,973,700</td>
-<td>0.83</td>
-<td>0.44</td>
-<td>0.77</td>
-<td>0.65</td>
+<td>0.46</td>
+<td>0.82</td>
+<td>0.61</td>
 <td>0.77</td>
 <td>0.60</td>
+<td>0.83</td>
 </tr>
 </tbody>
 </table>
@@ -21995,12 +22001,38 @@ class="
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>Conclusions on Key Questions:</strong><br></p>
+<ul>
+<li>How do our base CNN models compare with Transfer learning models of greater complexity?<br>
+The lower complexity models developed for this project were superior to the Transfer learning models on the selected dataset. VGG-16 was comparable to the first model developed, Resnet V2 and EfficientNet performed poorly on the dataset. The likely cause for this is that the dataset is low resolution grayscale images.</li>
+<li>Can we improve on our base CNN models through trial and error?<br>
+The developed models were consistently improved by adding Convolutional layers, batch normalization, pooling and dropout layers in addition to adjusting the image augmentation hyperparameters.</li>
+<li>Is the dataset good enough in both quantity and quality?<br>
+Although the dataset is low resolution, grayscale images with issues detected such as no face, multiple faces and watermarks, the CNN models developed were able to detect facial emotions with reasonable accuracy.</li>
+<li>Average natural human ability to detect emotions is around 90%, can we approach this level?<br>
+The final CNN model developed, CNN Grayscale 4, had approximately 80% accuracy for training, validation and test sets. This is in the ballpark of natural human emotional detection ability and for the selected dataset likely near maximum accuracy.</li>
+<li>Are there any ethical issues with CNN/AI facial emotion detection or is it innocuous because it does not involve identity?<br>
+Due to the fact that identification is not involved and the expected use cases of safety and marketing/advertising there are not significant ethical issues with the CNN facial emotion detection model.</li>
+<li>Is the final model for the Capstone project good enough for deployment?<br>
+For the selected dataset type, lower resolution grayscale images, the final model is good enough for deployment to the stakeholders.</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!pip install nbconvert</span>
